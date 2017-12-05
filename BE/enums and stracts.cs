@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace BE
 {
-    enum days { Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, size }
 
     struct Work_Schedule
     {

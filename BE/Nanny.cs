@@ -25,7 +25,7 @@ namespace BE
         public bool allow_rate_per_hour { get; set; }
         public double hourly_rate { get; set; }
         public double monthly_rate { get; set; }
-        private Work_Schedule[] work_schedule = new Work_Schedule[(int)days.size];
+        private Work_Schedule[] work_schedule = new Work_Schedule[(int)DayOfWeek.Saturday];
 
     }
 }
