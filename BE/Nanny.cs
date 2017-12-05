@@ -8,5 +8,10 @@ namespace BE
 {
     public class Nanny
     {
+        //------------proportis and fields----------
+        public readonly string ID;
+        public string first_name { get; set; }
+        public string last_name { get; set; }
+
     }
 }
