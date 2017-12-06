@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace BE
 {
+   
 
     public class Work_Schedule
     {
+        
         public bool works { get; set; }
         public DateTime start_hour { get; set; }
         public DateTime end_hour { get; set; }
