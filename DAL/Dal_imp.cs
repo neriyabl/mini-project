@@ -21,12 +21,22 @@ namespace DAL
 
         public void add_contract(Contract contract)
         {
-            throw new NotImplementedException();
+            foreach (var item in DS.DataSource.Contract_list)
+            {
+                if (item.contract_number == contract.contract_number)
+                    throw new Exception("the contract already exist\n");
+            }
+            DS.DataSource.Contract_list.Add(contract);
         }
 
         public void add_Mother(Mother mother)
         {
-            throw new NotImplementedException();
+            foreach (var item in DS.DataSource.Mother_list)
+            {
+                if (item.ID == mother.ID)
+                    throw new Exception("the mother already exist\n");
+            }
+            DS.DataSource.Mother_list.Add(mother);
         }
 
         public void add_nanny(Nanny nanny)
