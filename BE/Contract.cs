@@ -8,6 +8,7 @@ namespace BE
 {
     class Contract
     {
+        private static int numbers_of_contracts = 0;
 
     }
 }
