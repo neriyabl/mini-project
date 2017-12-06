@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    public class Idal
+    public interface Idal
     {
-
+   
     }
 }
