@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BE
 {
-    class Mother
+    public class Mother
     {
         //------------proportis and fields----------
         public readonly String ID;
