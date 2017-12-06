@@ -25,7 +25,32 @@ namespace BE
         public bool allow_rate_per_hour { get; set; }
         public double hourly_rate { get; set; }
         public double monthly_rate { get; set; }
-        private Work_Schedule[] work_schedule = new Work_Schedule[(int)DayOfWeek.Saturday];
+        private Work_Schedule[] work_schedule = new Work_Schedule[6];
+        public Work_Schedule[] Work_schedule
+        {
+            get
+            {
+                return work_schedule;
+            }
+        }
+        public bool Education_or_ITL { get; set; }
+        public string feedbacks { get; set; }
 
+        //---------------Methods---------------
+        public override string ToString()
+        {
+            return
+                (
+                "The Nanny: " + first_name + " " + last_name + "\n"
+                + "ID: " + ID + "\t"
+                + "Phone number: " + phone_number + "\n"
+                + "Address: " + address.Replace(",", ", ") + "\n"
+                );
+        }
+
+        //---------add and remove data in work schedule-------
+        public void set_day_in_schedule(int day, DateTime start, DateTime end) { work_schedule[day] = new Work_Schedule(start, end); }
+        public void remove_day_from_schedule(int day) { work_schedule[day].works = false; }
+        //---------------------------------------------------------------------------------
     }
 }

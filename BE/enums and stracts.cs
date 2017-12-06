@@ -7,10 +7,17 @@ using System.Threading.Tasks;
 namespace BE
 {
 
-    struct Work_Schedule
+    public class Work_Schedule
     {
-        bool works;
-        DateTime start_hour;
-        DateTime end_hour;
+        public bool works { get; set; }
+        public DateTime start_hour { get; set; }
+        public DateTime end_hour { get; set; }
+        public Work_Schedule() { works = false; }
+        public Work_Schedule(DateTime start, DateTime end, bool work = true)
+        {
+            start_hour = start;
+            end_hour = end;
+            works = work;
+        }
     }
 }
