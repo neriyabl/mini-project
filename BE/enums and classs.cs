@@ -42,7 +42,7 @@ namespace BE
         }
         public int CompareTo(object obj)
         {
-            return Convert.ToUInt32(Num).CompareTo(obj);
+            return Convert.ToInt32(Num).CompareTo(obj);
         }
 
         //------------implicits-----------
