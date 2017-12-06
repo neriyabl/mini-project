@@ -8,5 +8,6 @@ namespace BE
 {
     class Contract
     {
+
     }
 }
