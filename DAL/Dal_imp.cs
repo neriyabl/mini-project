@@ -9,6 +9,8 @@ namespace DAL
 {
     class Dal_imp : Idal
     {
+
+        //-------------------child list function---------------------
         public void add_child(Child child)
         {
             foreach (var item in DS.DataSource.Child_list)
@@ -18,37 +20,6 @@ namespace DAL
             }
             DS.DataSource.Child_list.Add(child);
         }
-
-        public void add_contract(Contract contract)
-        {
-            foreach (var item in DS.DataSource.Contract_list)
-            {
-                if (item.contract_number == contract.contract_number)
-                    throw new Exception("the contract already exist\n");
-            }
-            DS.DataSource.Contract_list.Add(contract);
-        }
-
-        public void add_Mother(Mother mother)
-        {
-            foreach (var item in DS.DataSource.Mother_list)
-            {
-                if (item.ID == mother.ID)
-                    throw new Exception("the mother already exist\n");
-            }
-            DS.DataSource.Mother_list.Add(mother);
-        }
-
-        public void add_nanny(Nanny nanny)
-        {
-            throw new NotImplementedException();
-        }
-
-
-
-
-
-
         public void remove_child(Child child)
         {
             foreach (var item in DS.DataSource.Child_list )
@@ -61,7 +32,21 @@ namespace DAL
             }
             throw new Exception("this child not exist\n");
         }
+        public void update_child(Child child)
+        {
+            throw new NotImplementedException();
+        }
 
+        //----------------contract list function------------------
+        public void add_contract(Contract contract)
+        {
+            foreach (var item in DS.DataSource.Contract_list)
+            {
+                if (item.contract_number == contract.contract_number)
+                    throw new Exception("the contract already exist\n");
+            }
+            DS.DataSource.Contract_list.Add(contract);
+        }
         public void remove_contract(Contract contract)
         {
             foreach (var item in DS.DataSource.Contract_list)
@@ -75,7 +60,21 @@ namespace DAL
 
             throw new Exception("the contract does not exsist ");
         }
-
+        public void update_contract(Contract contract)
+        {
+            throw new NotImplementedException();
+        }
+        
+        //-----------------mother list function--------------------
+        public void add_Mother(Mother mother)
+        {
+            foreach (var item in DS.DataSource.Mother_list)
+            {
+                if (item.ID == mother.ID)
+                    throw new Exception("the mother already exist\n");
+            }
+            DS.DataSource.Mother_list.Add(mother);
+        }
         public void remove_Mother(Mother mother)
         {
             foreach (var item in DS.DataSource.Mother_list)
@@ -88,7 +87,16 @@ namespace DAL
             }
             throw new Exception("the mother does not exsist\n");
         }
-
+        public void update_Mother(Mother mother)
+        {
+            throw new NotImplementedException();
+        }
+        
+        //------------------nanny list function--------------------
+        public void add_nanny(Nanny nanny)
+        {
+            throw new NotImplementedException();
+        }
         public void remove_nanny(Nanny nanny)
         {
             {
@@ -104,34 +112,12 @@ namespace DAL
             }
 
         }
-
-
-
-
-
-
-
-
-
-
-        public void update_child(Child child)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void update_contract(Contract contract)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void update_Mother(Mother mother)
-        {
-            throw new NotImplementedException();
-        }
-
         public void update_nanny(Nanny nanny)
         {
             throw new NotImplementedException();
         }
+
+
+
     }
 }

@@ -9,16 +9,16 @@ namespace BE
     public class Child
     {
         //------------proportis and fields----------
-        private readonly string iD;
-        public string ID
+        private readonly number iD;
+        public number ID
         {
             get
             {
                 return iD;
             }
         }
-        private readonly string iD_of_mother;
-        public string ID_of_mother
+        private readonly number iD_of_mother;
+        public number ID_of_mother
         {
             get
             {

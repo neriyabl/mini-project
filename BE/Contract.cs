@@ -10,17 +10,17 @@ namespace BE
     {
         //------------proportis and fields----------
         private static int numbers_of_contracts = 10000000;
-        public readonly string contract_number = numbers_of_contracts.ToString();
-        private readonly string iD_of_nany;
-        public string ID_of_nany
+        public readonly number contract_number = new number(numbers_of_contracts.ToString());
+        private readonly number iD_of_nany;
+        public number ID_of_nany
         {
             get
             {
                 return iD_of_nany;
             }
         }
-        private readonly string iD_of_child;
-        public string ID_of_child
+        private readonly number iD_of_child;
+        public number ID_of_child
         {
             get
             {

@@ -9,10 +9,17 @@ namespace BE
     public class Mother
     {
         //------------proportis and fields----------
-        public readonly String ID;
+        private readonly number iD;
+        public number ID
+        {
+            get
+            {
+                return iD;
+            }
+        }
         public string first_name { get; set; }
         public string last_name { get; set; }
-        public string phone_number { get; set; }
+        public number phone_number { get; set; }
         public string address { get; set; }
         public string area_search { get; set;}
         private Work_Schedule[] work_schedule = new Work_Schedule[6];
@@ -26,11 +33,6 @@ namespace BE
         public string comment { get; set; }
 
 
-
-
-
-
-
         //---------------Methods---------------
         public override string ToString()
         {
@@ -42,11 +44,6 @@ namespace BE
                 + "Address: " + address.Replace(",", ", ") + "\n"
                 );
         }
-
-
-
-
-
 
 
         //---------add and remove data in work schedule-------
