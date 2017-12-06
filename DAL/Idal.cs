@@ -21,8 +21,6 @@ namespace DAL
         void remove_contract(BE.Contract contract);
         void update_contract(BE.Contract contract);
 
-
-
         void add_Mother(BE.Mother mother);
         void remove_Mother(BE.Mother mother);
         void update_Mother(BE.Mother mother);
