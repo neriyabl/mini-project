@@ -10,7 +10,15 @@ namespace BE
     public class Nanny
     {
         //------------proportis and fields----------
-        public readonly string ID;
+
+        private readonly string iD;
+        public string ID
+        {
+            get
+            {
+                return iD;
+            }
+        }
         public string first_name { get; set; }
         public string last_name { get; set; }
         public DateTime date_of_birth { get; set; }
