@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BE
+namespace DS
 {
-    class Contract
+    public class DataSource
     {
-        private static int numbers_of_contracts = 10000000;
-
+        public static List<BE>
     }
 }

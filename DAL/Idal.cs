@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BE
+namespace DAL
 {
-    class Contract
+    public class Idal
     {
-        private static int numbers_of_contracts = 10000000;
 
     }
 }
