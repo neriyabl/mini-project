@@ -34,9 +34,22 @@ namespace DAL
             throw new NotImplementedException();
         }
 
+
+
+
+
+
         public void remove_child(Child child)
         {
-            throw new NotImplementedException();
+            foreach (var item in DS.DataSource.Child_list )
+            {
+                if(item.ID==child.ID)
+                {
+                    DS.DataSource.Child_list.Remove(item);
+                    return;
+                }
+            }
+            throw new Exception("this child not exist\n");
         }
 
         public void remove_contract(Contract contract)
@@ -53,6 +66,15 @@ namespace DAL
         {
             throw new NotImplementedException();
         }
+
+
+
+
+
+
+
+
+
 
         public void update_child(Child child)
         {
