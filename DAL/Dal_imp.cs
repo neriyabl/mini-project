@@ -64,17 +64,45 @@ namespace DAL
 
         public void remove_contract(Contract contract)
         {
-            throw new NotImplementedException();
+            foreach (var item in DS.DataSource.Contract_list)
+            {
+                if (item.contract_number == contract.contract_number)
+                {
+                    DS.DataSource.Contract_list.Remove(item);
+                    return;
+                }
+            }
+
+            throw new Exception("the contract does not exsist ");
         }
 
         public void remove_Mother(Mother mother)
         {
-            throw new NotImplementedException();
+            foreach (var item in DS.DataSource.Mother_list)
+            {
+                if (item.ID == mother.ID)
+                {
+                    DS.DataSource.Mother_list.Remove(item);
+                    return;
+                }
+            }
+            throw new Exception("the mother does not exsist\n");
         }
 
         public void remove_nanny(Nanny nanny)
         {
-            throw new NotImplementedException();
+            {
+                foreach (var item in DS.DataSource.Nanny_list)
+                {
+                    if (item.ID == nanny.ID)
+                    {
+                        DS.DataSource.Nanny_list.Remove(item);
+                        return;
+                    }
+                }
+                throw new Exception("the nanny does not exsist\n");
+            }
+
         }
 
 
