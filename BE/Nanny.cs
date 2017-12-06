@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace BE
 {
-
     public class Nanny
     {
         //------------proportis and fields----------
@@ -26,7 +25,7 @@ namespace BE
         public double hourly_rate { get; set; }
         public double monthly_rate { get; set; }
         private Work_Schedule[] work_schedule = new Work_Schedule[6];
-        public Work_Schedule[] Work_schedule
+        public  Work_Schedule[] Work_schedule
         {
             get
             {
