@@ -11,13 +11,14 @@ namespace DAL
         //---------------Methods nanny---------------
         void add_nanny(BE.Nanny nanny);
         void remove_nanny(BE.Nanny nanny);
-        void remove_nanny(int nanny_id);
+        void remove_nanny(BE.number nanny_id);
         void update_nanny(BE.Nanny nanny);
         List<BE.Nanny> nannys_list();
 
         //---------------Methods child---------------
         void add_child(BE.Child child);
         void remove_child(BE.Child child);
+        void remove_child(BE.number child_id);
         void update_child(BE.Child child);
         List<BE.Child> children_list();
         List<BE.Child> Mothers_children(BE.Mother mother);

@@ -31,6 +31,17 @@ namespace BE
         public bool is_special_needs { get; set; }
         public string special_needs { get; set; }
         public string address { get; set; }
+        public int age
+        {
+            get
+            {
+                int age_year;
+                int age_month;
+                age_year = (int.Parse(DateTime.Today.ToString("yyyyMMdd")) - int.Parse(date_of_birth.ToString("yyyyMMdd"))) / 10000;
+                age_month = (int.Parse(DateTime.Today.ToString("MMdd")) - int.Parse(date_of_birth.ToString("MMdd"))) / 100;
+                return (age_year * 12 + age_month);
+            }
+        }
 
         //---------------Methods---------------
         public override string ToString()

@@ -54,6 +54,10 @@ namespace BE
         {
             return new number(n);
         }
+        public static implicit operator string(number n)
+        {
+            return n.Num;
+        }
 
         //------------constructors---------
         public number() { }

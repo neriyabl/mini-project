@@ -33,7 +33,7 @@ namespace BE
         public double hourly_rate { get; set; }
         public double monthly_rate { get; set; }
         private Work_Schedule[] work_schedule = new Work_Schedule[6];
-        public  Work_Schedule[] Work_schedule
+        public Work_Schedule[] Work_schedule
         {
             get
             {
@@ -42,6 +42,15 @@ namespace BE
         }
         public bool Education_or_ITL { get; set; }
         public string feedbacks { get; set; }
+        public int age
+        {
+            get
+            {
+                int age_year;
+                age_year = (int.Parse(DateTime.Today.ToString("yyyyMMdd")) - int.Parse(date_of_birth.ToString("yyyyMMdd"))) / 10000;
+                return age_year;
+            }
+        }
 
         //---------------Methods---------------
         public override string ToString()

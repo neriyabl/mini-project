@@ -112,12 +112,43 @@ namespace DAL
             }
 
         }
+        public void remove_nanny(number nanny_id)
+        {
+            throw new NotImplementedException();
+        }
         public void update_nanny(Nanny nanny)
         {
             throw new NotImplementedException();
         }
 
+        public List<Nanny> nannys_list()
+        {
+            throw new NotImplementedException();
+        }
 
+        public List<Child> children_list()
+        {
+            throw new NotImplementedException();
+        }
 
+        public List<Child> Mothers_children(Mother mother)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Child> Mothers_children(number mother_id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Contract> contracts_list()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Mother> mothers_list()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
